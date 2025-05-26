@@ -5,7 +5,7 @@ senza dover centralizzare i dati. Ogni partecipante (client) allena localmente i
 
 ## Prima simulazione
 Come prima simulazione consideriamo i client come delle funzioni locali che restituiscono i risultati del proprio ciclo di training sottoforma di 
-parametri della rete neurale che stanno allenando. Faremo due esperimenti suddividendo in modo diverso il dataset tra i client:
+parametri della rete neurale che stanno allenando. Faremo due esperimenti, entrambi su 10 round di scambio di dati, suddividendo in modo diverso il dataset tra i client:
 - Dataset diviso uniformemente tra i client
 - Dataset diviso NON uniformemente tra i client
 
@@ -13,7 +13,18 @@ parametri della rete neurale che stanno allenando. Faremo due esperimenti suddiv
 - Figura 1: 5 client
 - Figura 2: 10 client
 
-![accuracy_plot5](https://github.com/user-attachments/assets/d91a80ea-6e56-43b9-8eb2-19605757ffa6)
+<img src="Immagini/accuracy_plot5.png" alt="Grafico" width="400"></img>
 *Figura 1.*
-![accuracy_plot10](https://github.com/user-attachments/assets/b558703b-88b1-4602-a025-1a1c37edff72)
+
+<img src="Immagini/accuracy_plot10.png" alt="Grafico" width="400"></img>
 *Figura 2.*
+
+### Dataset diviso non uniformemente
+- Figura 3: 5 client
+- Figura 4: 10 client
+
+<img src="Immagini/accuracy_plot_non_IID5.png" alt="Grafico" width="400"></img>
+*Figura 3.*
+
+<img src="Immagini/accuracy_plot_non_IID10.png" alt="Grafico" width="400"></img>
+*Figura 4.*
