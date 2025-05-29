@@ -9,27 +9,27 @@ parametri della rete neurale che stanno allenando. Faremo due esperimenti, entra
 - Dataset diviso uniformemente tra i client
 - Dataset diviso NON uniformemente tra i client
 
-### Dataset diviso uniformemente
-- Figura 1: 5 client
-- Figura 2: 10 client
+### Suddivisione IID del Dataset
+La suddivisione IID dei dati avviene nel seguente modo:
+1. Si divide il numero di esempi totali presenti nel dataset per il numero di client e si distribuisce l'eventuale resto, ottenendo così il numero di esempi in ogni partizione
+2. Si suddivide randomicamente il dataset sulla base delle dimensioni calcolate
+3. Si associa ogni partizione a un client, che verrà quindi allenato solo su quella partizione
 
-<img src="Immagini/accuracy_plot5.png" alt="Grafico" width="400"></img>
-*Figura 1.*
-
-<img src="Immagini/accuracy_plot10.png" alt="Grafico" width="400"></img>
-*Figura 2.*
-
-### Dataset diviso non uniformemente
+### Suddivisione non-IID del Dataset
 La suddivisione non-IID dei dati avviene nel seguente modo (supponendo di avere n_clients >= n_labels):
 1. Si considerano tutte le label del dataset e tutti i client
 2. Si itera sui client associando una label a ciascuno
-3. Terminata l'iterazione sui client, si riparte dal primo client e si continuano ad assegnare le label rimanenti
-4. Se necessario, si ripete il punto 3 fino a quando le label saranno tutte assegnate
-- Figura 3: 5 client
-- Figura 4: 10 client
+3. Se rimangono delle label non assegnate una volta terminata la prima iterazione sui client, si riparte dal primo client e si continuano ad assegnare le label rimanenti
+4. Si ripete il punto 3 fino a quando tutte le label non saranno state assegnate ai client
+Notiamo che nel caso in cui i client sono 10, ciascuno riceve una sola label da momento che questi esperimenti fanno riferimento a fashionMNIST, un dataset con appunto 10 label; questo spiega perchè i risultati di training con 10 client restituiscano un'accuracy più bassa rispetto allo stesso caso ma con 5 client.
 
-<img src="Immagini/accuracy_plot_non_IID5.png" alt="Grafico" width="400"></img>
-*Figura 3.*
+### Risultati grafici
+Di seguito sono mostrati graficamente i risultati ottenuti.
+Sono stati utilizzati i seguenti learning rate:
+- 5 client:
+  - Caso IID: learning rate = 2 · 10⁻¹
+  - Caso non-IID: learning rate = 8 · 10⁻²
+- 10 client:
+  - Caso IID: learning rate = 7 · 10⁻²
+  - Caso non-IID: learning rate = 2 · 10⁻³
 
-<img src="Immagini/accuracy_plot_non_IID10.png" alt="Grafico" width="400"></img>
-*Figura 4.*
