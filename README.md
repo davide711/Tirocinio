@@ -20,6 +20,11 @@ parametri della rete neurale che stanno allenando. Faremo due esperimenti, entra
 *Figura 2.*
 
 ### Dataset diviso non uniformemente
+La suddivisione non-IID dei dati avviene nel seguente modo (supponendo di avere n_clients >= n_labels):
+1. Si considerano tutte le label del dataset e tutti i client
+2. Si itera sui client associando una label a ciascuno
+3. Terminata l'iterazione sui client, si riparte dal primo client e si continuano ad assegnare le label rimanenti
+4. Se necessario, si ripete il punto 3 fino a quando le label saranno tutte assegnate
 - Figura 3: 5 client
 - Figura 4: 10 client
 
