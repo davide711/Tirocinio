@@ -21,7 +21,6 @@ La suddivisione non-IID dei dati avviene nel seguente modo (supponendo di avere 
 2. Si itera sui client associando una label a ciascuno
 3. Se rimangono delle label non assegnate una volta terminata la prima iterazione sui client, si riparte dal primo client e si continuano ad assegnare le label rimanenti
 4. Si ripete il punto 3 fino a quando tutte le label non saranno state assegnate ai client
-Notiamo che nel caso in cui i client sono 10, ciascuno riceve una sola label da momento che questi esperimenti fanno riferimento a fashionMNIST, un dataset con appunto 10 label; questo spiega perchè i risultati di training con 10 client restituiscano un'accuracy più bassa rispetto allo stesso caso ma con 5 client.
 
 ### Risultati grafici
 Di seguito sono mostrati graficamente i risultati ottenuti.
@@ -32,6 +31,8 @@ Sono stati utilizzati i seguenti learning rate:
 - 10 client (*Figura 2*):
   - Caso IID: learning rate = 7 · 10⁻²
   - Caso non-IID: learning rate = 2 · 10⁻³
+ 
+Notiamo che nel caso in cui i client sono 10, ciascuno riceve una sola label, dal momento che questi esperimenti fanno riferimento a fashionMNIST, un dataset con proprio 10 label; questo spiega perchè i risultati di training con 10 client restituiscano un'accuracy più bassa rispetto allo stesso caso ma con 5 client (in cui ogni client riceve 2 label).
 
 <img src="Immagini/accuracy_plot_5.png" alt="Accuracy diagram 5 clients" width="400"> </img> <br>
 *Figura 1*
