@@ -26,15 +26,15 @@ Notiamo che nel caso in cui i client sono 10, ciascuno riceve una sola label da 
 ### Risultati grafici
 Di seguito sono mostrati graficamente i risultati ottenuti.
 Sono stati utilizzati i seguenti learning rate:
-- 5 client (*figura 1*):
+- 5 client (*Figura 1*):
   - Caso IID: learning rate = 2 · 10⁻¹
   - Caso non-IID: learning rate = 8 · 10⁻²
-- 10 client:
+- 10 client (*Figura 2*):
   - Caso IID: learning rate = 7 · 10⁻²
   - Caso non-IID: learning rate = 2 · 10⁻³
 
-<img src="Immagini/accuracy_plot_5.png" alt="Accuracy diagram 5 clients" width="400" />
+<img src="Immagini/accuracy_plot_5.png" alt="Accuracy diagram 5 clients" width="400"> </img> <br>
 *Figura 1*
 
-<img src="Immagini/accuracy_plot_10.png" alt="Accuracy diagram 5 clients" width="400" />
+<img src="Immagini/accuracy_plot_10.png" alt="Accuracy diagram 5 clients" width="400" /> </img> <br>
 *Figura 2*
