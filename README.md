@@ -6,8 +6,8 @@ senza dover centralizzare i dati. Ogni partecipante (client) allena localmente i
 ## Prima simulazione
 Come prima simulazione consideriamo i client come delle funzioni locali che restituiscono i risultati del proprio ciclo di training sottoforma di 
 parametri della rete neurale che stanno allenando. Faremo due esperimenti, entrambi su 10 round di scambio di dati, suddividendo in modo diverso il dataset tra i client:
-- Dataset diviso uniformemente tra i client
-- Dataset diviso NON uniformemente tra i client
+- Dataset diviso uniformemente tra i client (IID)
+- Dataset diviso NON uniformemente tra i client (non-IID)
 
 ### Suddivisione IID del Dataset
 La suddivisione IID dei dati avviene nel seguente modo:
