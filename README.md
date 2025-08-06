@@ -3,7 +3,7 @@ Federated Learning (FL)  è un paradigma di apprendimento automatico che consen
 senza dover centralizzare i dati. Ogni partecipante (client) allena localmente il modello sui propri dati e invia solo aggiornamenti 
 (come i nuovi parametri del modello) a un server centrale. Questo approccio permette di preservare la privacy dei dati sensibili e ridurre il traffico di rete.
 
-## Prima simulazione
+## Prima simulazione: fashionMNIST
 Come prima simulazione consideriamo i client come delle funzioni locali che restituiscono i risultati del proprio ciclo di training sottoforma di 
 parametri della rete neurale che stanno allenando. Faremo due esperimenti, entrambi su 10 round di scambio di dati, suddividendo in modo diverso il dataset tra i client:
 - Dataset diviso uniformemente tra i client (IID)
