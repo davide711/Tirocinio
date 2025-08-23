@@ -44,3 +44,9 @@ Notiamo che, nel caso in cui i client siano 10, ciascuno di essi riceve una sola
 *Fed-Heart-Disease* è un dataset derivante da *UCI Heart Disease Dataset*, che viene utilizzato in contesti di machine learning centralizzato per predire la presenza o assenza di una malattia cardiaca a partire da 76 parametri medici, in forma tabellare, di un paziente, tra cui età, sesso, pressione sanguigna a riposo e colesterolo. *Fed-Heart-Disease* fa parte della suite di *FLamby*, che mette a disposizione dataset sanitari cross-silo appositi per il federated learning. Il dataset in questione è infatti una suddivisione non-IID di *UCI Heart Disease* in 4 parti, creata appositamente per simulare il training federato sulla base dei dati raccolti da 4 istituti differenti e tra loro indipendenti.
 Nello specifico, dei 76 parametri disponibili per ogni paziente, vengono considerati solamente i primi 13, essendo questi i più significativi, completi e facilmente reperibili.
 Il task della rete è una semplice classificazione binaria, come anticipato in precedenza, sulla presenza o assenza di una patologia cardiaca.
+
+### Risultati ottenuti
+I test sono stati effettuati sia in ambiente centralizzato, unendo precedentemente il dataset che come detto in precedenza è già suddiviso in 4, sia in ambiente federato, ottenendo accuratezze pressochè uguali.
+
+<img src="Immagini/accuracy_plot_5.png" alt="Accuracy diagram 5 clients" width="400"> </img> <br>
+*Figura 3*
