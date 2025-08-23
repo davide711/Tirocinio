@@ -34,10 +34,10 @@ Sono stati utilizzati i seguenti learning rate:
  
 Notiamo che, nel caso in cui i client siano 10, ciascuno di essi riceve una sola label, dal momento che questi esperimenti fanno riferimento a *fashionMNIST*, un dataset con 10 label. Questo spiega in parte una accuracy nettamente più bassa nel caso di training con 10 client rispetto al caso in cui i client sono 5, dove ognuno riceve 2 label.
 
-<img src="Immagini/accuracy_plot_5.png" alt="Accuracy diagram 5 clients" width="400"> </img> <br>
+<img src="Immagini/fashionMNIST/accuracy_plot_5.png" alt="Accuracy diagram 5 clients" width="400"> </img> <br>
 *Figura 1*
 
-<img src="Immagini/accuracy_plot_10.png" alt="Accuracy diagram 5 clients" width="400" /> </img> <br>
+<img src="Immagini/fashionMNIST/accuracy_plot_10.png" alt="Accuracy diagram 5 clients" width="400" /> </img> <br>
 *Figura 2*
 
 ## Fed-Heart-Disease
