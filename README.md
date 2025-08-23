@@ -48,5 +48,5 @@ Il task della rete è una semplice classificazione binaria, come anticipato in p
 ### Risultati ottenuti
 I test sono stati effettuati sia in ambiente centralizzato, unendo precedentemente il dataset che come detto in precedenza è già suddiviso in 4, sia in ambiente federato, ottenendo accuratezze pressochè uguali.
 
-<img src="Immagini/accuracy_plot_5.png" alt="Accuracy diagram 5 clients" width="400"> </img> <br>
+<img src="Immagini/fed-heart-disease/accuracy_plot.png" alt="Accuracy diagram fed-heart-disease" width="400"> </img> <br>
 *Figura 3*
