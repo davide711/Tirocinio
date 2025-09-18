@@ -11,9 +11,9 @@ parametri della rete neurale che stanno allenando. Faremo due esperimenti, entra
 
 ### Suddivisione IID del Dataset
 La suddivisione IID dei dati avviene nel seguente modo:
-1. Si divide il numero di esempi totali presenti nel dataset per il numero di client e si distribuisce l'eventuale resto, ottenendo così il numero di esempi in ogni partizione
-2. Si suddivide randomicamente il dataset sulla base delle dimensioni calcolate
-3. Si associa ogni partizione a un client, che verrà quindi allenato solo su quella partizione
+1. Si creaa una struttura dati che memorizzi, per ogni label, un array di posizioni, ovvero gli indici corrispondenti dei dati nel dataset che hanno quella label. Ogni entry sarà quindi del tipo (label, array-di-indici);
+2. Iterando sulle entry, si divide la dimensione dell'array di indici corrispondente per il numero di client, considerando la distribuzione di eventuale resto, ottenendo così la quantità di esempi con quella label che ogni client avrà;
+3. Iterando sui client, si distribuiscono gli esempi, ottenendo così una struttura dati che contiene, per ogni client, la lista degli indici del dataset che quel client utilizzerà per il training locale. Ogni entry sarà quindi del tipo (numero-client, array-di-indici);
 
 ### Suddivisione non-IID del Dataset
 La suddivisione non-IID dei dati avviene nel seguente modo (supponendo di avere n_clients >= n_labels):
