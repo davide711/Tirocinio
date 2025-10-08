@@ -50,4 +50,8 @@ Questo dataset è stato utilizzato per analizzare e confrontare l'andamento dell
 Come per fashionMNIST, essendo OrganSMNIST un dataset unico e pensato per il training centralizzato, è stato necessario suddividerlo manualmente nei due modi IID e non-IID, riutilizzando le funzioni create per fashionMNIST. Questa suddivisione è piuttosto realistica, in quanto spesso all'allenamento di una rete neurale da utilizzare in ambito biomedico partecipano diversi istituti di ricerca o poli ospedalieri, che allenano un proprio modello sulle immagini raccolte per poi partecipare all'aggiornamento di un modello centrale.
 
 ### Risultati ottenuti
-
+- Learning rate centralizzato: 0,0025
+- Learning rate IID: 0,015
+- Learning rate non-IID: 0,003
+<img src="Immagini/MedMNIST/accuracy_plot_med.png" alt="Accuracy diagram 5 clients" width="400"> </img> <br>
+*Figura 2*
