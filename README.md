@@ -40,13 +40,13 @@ Notiamo che, nel caso in cui i client siano 10, ciascuno di essi riceve una sola
 <img src="Immagini/fashionMNIST/accuracy_plot_10.png" alt="Accuracy diagram 5 clients" width="400" /> </img> <br>
 *Figura 2*
 
-## Fed-Heart-Disease
-*Fed-Heart-Disease* è un dataset derivante da *UCI Heart Disease Dataset*, che viene utilizzato in contesti di machine learning centralizzato per predire la presenza o assenza di una malattia cardiaca a partire da 76 parametri medici, in forma tabellare, di un paziente, tra cui età, sesso, pressione sanguigna a riposo e colesterolo. *Fed-Heart-Disease* fa parte della suite di *FLamby*, che mette a disposizione dataset sanitari cross-silo appositi per il federated learning. Il dataset in questione è infatti una suddivisione non-IID di *UCI Heart Disease* in 4 parti, creata appositamente per simulare il training federato sulla base dei dati raccolti da 4 istituti differenti e tra loro indipendenti.
-Nello specifico, dei 76 parametri disponibili per ogni paziente, vengono considerati solamente i primi 13, essendo questi i più significativi, completi e facilmente reperibili.
-Il task della rete è una semplice classificazione binaria, come anticipato in precedenza, sulla presenza o assenza di una patologia cardiaca.
+## MedMNIST
+*MedMNIST* è una raccolta di dataset medicali pensata per l’addestramento e la valutazione di modelli di deep learning nel campo dell’imaging biomedico. È un insieme di 12 dataset, ognuno rappresentante un tipo diverso di immagine medica e un diverso compito di classificazione. Il dataset preso in considerazione è OrganSMNIST, composto da 17.500 immagini di training e 7.600 di test. Le immagini riguardano 11 organi (tra cui milza, reni, cistifellea e fegato) visti dal piano sagittale, ovvero sezionati lungo un piano orizzontale, e sono state ottenute tramite tecniche radiografiche.
+Questo dataset è stato utilizzato per analizzare e confrontare l'andamento dell'allenamento di una rete neurale in 3 casi:
+- Allenamento di una rete neurale centralizzata;
+- Allenamento federato, con dataset suddiviso IID;
+- Allenamento federato, con dataset suddiviso non-IID
+Come per fashionMNIST, essendo OrganSMNIST un dataset unico e pensato per il training centralizzato, è stato necessario suddividerlo manualmente nei due modi IID e non-IID, riutilizzando le funzioni create per fashionMNIST. Questa suddivisione è piuttosto realistica, in quanto spesso all'allenamento di una rete neurale da utilizzare in ambito biomedico partecipano diversi istituti di ricerca o poli ospedalieri, che allenano un proprio modello sulle immagini raccolte per poi partecipare all'aggiornamento di un modello centrale.
 
 ### Risultati ottenuti
-I test sono stati effettuati sia in ambiente centralizzato, unendo precedentemente il dataset che come detto in precedenza è già suddiviso in 4, sia in ambiente federato, ottenendo accuratezze pressochè uguali.
 
-<img src="Immagini/fed-heart-disease/accuracy_plot.png" alt="Accuracy diagram fed-heart-disease" width="400"> </img> <br>
-*Figura 3*
