@@ -45,7 +45,8 @@ Notiamo che, nel caso in cui i client siano 10, ciascuno di essi riceve una sola
 Questo dataset è stato utilizzato per analizzare e confrontare l'andamento dell'allenamento di una rete neurale in 3 casi:
 - Allenamento di una rete neurale centralizzata;
 - Allenamento federato, con dataset suddiviso IID;
-- Allenamento federato, con dataset suddiviso non-IID
+- Allenamento federato, con dataset suddiviso non-IID;
+
 Come per fashionMNIST, essendo OrganSMNIST un dataset unico e pensato per il training centralizzato, è stato necessario suddividerlo manualmente nei due modi IID e non-IID, riutilizzando le funzioni create per fashionMNIST. Questa suddivisione è piuttosto realistica, in quanto spesso all'allenamento di una rete neurale da utilizzare in ambito biomedico partecipano diversi istituti di ricerca o poli ospedalieri, che allenano un proprio modello sulle immagini raccolte per poi partecipare all'aggiornamento di un modello centrale.
 
 ### Risultati ottenuti
