@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Federated Learning
 Federated Learning (FL)  è un paradigma di apprendimento automatico che consente a più dispositivi o organizzazioni di collaborare all’addestramento di un modello condiviso (ad esempio una rete neurale), 
 senza dover centralizzare i dati. Ogni partecipante (client) allena localmente il modello sui propri dati e invia solo aggiornamenti 
@@ -55,3 +56,6 @@ Come per fashionMNIST, essendo OrganSMNIST un dataset unico e pensato per il tra
 - Learning rate non-IID: 0,003
 <img src="Immagini/MedMNIST/accuracy_plot_med.png" alt="Accuracy diagram 5 clients" width="400"> </img> <br>
 *Figura 2*
+=======
+# Tirocinio_source
+>>>>>>> 118cff3 (first commit)
